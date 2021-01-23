@@ -62,7 +62,7 @@ export const entrySlice = createSlice({
     },
 
     addAllEntries: (state: any, { payload }: PayloadAction | any) => {
-      let data = payload.map((x: any) => {
+      let data = payload.forEach((x: any) => {
         if (!state.entries.includes(x.id)) {
           return x;
         }

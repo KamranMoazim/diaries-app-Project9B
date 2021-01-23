@@ -73,12 +73,12 @@ const signup = (schema: any, req: Request): any => {
   };
 };
 
-
-
-export default {
+const data = {
   login,
   signup,
 };
+
+export default data
 
 
 
