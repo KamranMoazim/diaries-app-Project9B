@@ -36,7 +36,7 @@ const MyDiaries = () => {
   useEffect(() => {
     const mine = data.filter((x: DiaryType) => x.userId === user.id);
     setDiaries(mine);
-  }, [data, user.id]);
+  }, [data]);
 
 
   if (diaries.every((x: DiaryType) => x.type !== "private")) {
@@ -63,7 +63,7 @@ const MyDiaries = () => {
                 </div>
               );
             }
-            return <h1>You have No Private Diary!</h1>
+            // return <h1>You have No Private Diary!</h1>
           })}
       </div>
     </div>

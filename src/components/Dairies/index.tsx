@@ -67,7 +67,7 @@ const Dairies = () => {
                   </div>
                 );
               }
-              return <h1>You have created No Public Diary!</h1>
+              // return <h1>You have created No Public Diary!</h1>
             })}
         </div>
       </div>

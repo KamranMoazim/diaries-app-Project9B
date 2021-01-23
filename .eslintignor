@@ -1,0 +1,4 @@
+build/*.tsx
+build/*.ts
+src/*.tsx
+src/*.ts
