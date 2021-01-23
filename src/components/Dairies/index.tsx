@@ -61,7 +61,7 @@ const Dairies = () => {
       <div className="container-fluid text-center" style={{ margin: "0 auto" }}>
         <div className="row  no-gutters    pt-3">
           {diaries &&
-            diaries.map((item: diary, index: string) => {
+            diaries.forEach((item: diary, index: string) => {
               if (item.type === "Public") {
                 return (
                   <div className="col-md-3 p-0 m-1 diaryBox" key={index}>

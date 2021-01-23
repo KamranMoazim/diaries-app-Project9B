@@ -36,7 +36,7 @@ const MyDiaries = () => {
   useEffect(() => {
     const mine = data.filter((x: DiaryType) => x.userId === user.id);
     setDiaries(mine);
-  }, [data]);
+  }, [data, user.id]);
 
 
   if (diaries.every((x: DiaryType) => x.type !== "private")) {
@@ -55,7 +55,7 @@ const MyDiaries = () => {
 
       <div className="row  no-gutters justify-content-center pt-3">
         {diaries &&
-          diaries.map((item: diary, index: string) => {
+          diaries.forEach((item: diary, index: string) => {
             if (item.type === "private") {
               return (
                 <div className="col-md-3 p-0 m-1 DiaryBox" key={index}>

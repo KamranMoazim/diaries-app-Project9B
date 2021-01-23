@@ -68,23 +68,37 @@ const DiaryContent = () => {
 
   const { id }: { id: string } = useParams();
 
-  const getEntry = (id: string) => {
-    const path = `/diaries/entry/${id}`;
-    http.get(path).then((e: EntryType | any) => {
-      // let modifiedEntry = e.entries.map((x: Entry) => {
-      //   x["diaryId"] = id;
-      //   return x;
-      // });
-      dispatch(addAllEntries(e.entries));
+  // const getEntry = (id: string) => {
+  //   const path = `/diaries/entry/${id}`;
+  //   http.get(path).then((e: EntryType | any) => {
+  //     // let modifiedEntry = e.entries.map((x: Entry) => {
+  //     //   x["diaryId"] = id;
+  //     //   return x;
+  //     // });
+  //     dispatch(addAllEntries(e.entries));
 
-      // setEntry(entries);
-    });
-  };
+  //     // setEntry(entries);
+  //   });
+  // };
 
 
   useEffect(() => {
+
+    const getEntry = (id: string) => {
+      const path = `/diaries/entry/${id}`;
+      http.get(path).then((e: EntryType | any) => {
+        // let modifiedEntry = e.entries.map((x: Entry) => {
+        //   x["diaryId"] = id;
+        //   return x;
+        // });
+        dispatch(addAllEntries(e.entries));
+  
+        // setEntry(entries);
+      });
+    };
+
     getEntry(id);
-  }, []); /////////////////////////////////////////
+  }, [id]); /////////////////////////////////////////
 
 
   useEffect(() => {
@@ -100,7 +114,7 @@ const DiaryContent = () => {
 
     const myEntries = entries.filter((x: EntryType) => x.diaryId === id);
     setEntry(myEntries);
-  }, [allDiaries, entries]);  /////////////////////////////////
+  }, [allDiaries, entries, user.id, id]);  /////////////////////////////////
 
 
 
@@ -117,9 +131,9 @@ const DiaryContent = () => {
       setEntryName(entryFilterd[0].title);
       setEntryContent(entryFilterd[0].content);
     }
-    {
+    // {
       entryModal ? setEntryModal(false) : setEntryModal(true); ///////////////////////////////////
-    }
+    // }
   };
 
 
