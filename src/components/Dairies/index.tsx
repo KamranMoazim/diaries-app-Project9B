@@ -1,3 +1,5 @@
+/* eslint-disable no-use-before-define */
+
 import Diary from "../Diary";
 import "./diary.css";
 import { useEffect, useState } from "react";
@@ -76,3 +78,6 @@ const Dairies = () => {
 };
 
 export default Dairies;
+
+
+/* eslint-enable no-use-before-define */

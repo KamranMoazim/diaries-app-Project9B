@@ -1,3 +1,5 @@
+/* eslint-disable no-use-before-define */
+
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit"; // current,
 import http from "../../services/api";
 import { EntryType } from "../../types/types";
@@ -126,3 +128,7 @@ export const entrySlice = createSlice({
 
 export const { removeEntries, addAllEntries } = entrySlice.actions;
 export default entrySlice.reducer;
+
+
+
+/* eslint-enable no-use-before-define */

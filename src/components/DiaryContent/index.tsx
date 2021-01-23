@@ -1,3 +1,6 @@
+/* eslint-disable no-use-before-define */
+
+
 import "./diaryContent.css";
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
@@ -398,3 +401,8 @@ const DiaryContent = () => {
 };
 
 export default DiaryContent;
+
+
+
+
+/* eslint-enable no-use-before-define */

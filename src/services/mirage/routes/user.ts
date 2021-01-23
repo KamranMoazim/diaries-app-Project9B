@@ -1,3 +1,6 @@
+/* eslint-disable no-use-before-define */
+
+
 import { Request, Response } from "miragejs";
 import { handleError } from "../server";
 import { User } from "../../../Interfaces/user.interface";
@@ -76,3 +79,8 @@ export default {
   login,
   signup,
 };
+
+
+
+
+/* eslint-enable no-use-before-define */
