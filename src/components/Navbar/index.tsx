@@ -26,9 +26,8 @@ const Navbar = () => {
   return (
     <div style={{ width: "100vw" }}>
       <nav className="navbar navbar-expand-lg navbar-light ">
-        <a className="navbar-brand font-weight-bold text-white" href="#">
-          DiaryApp
-        </a>
+        {/* <a className="navbar-brand font-weight-bold text-white" href="#">  DiaryApp    </a> */}
+        <button className="navbar-brand font-weight-bold text-white">  DiaryApp    </button>
         <button
           className="navbar-toggler"
           type="button"
@@ -50,14 +49,14 @@ const Navbar = () => {
 
             <Link to="/myDiaries/">
               <li className="nav-item">
-                <a className="nav-link">My Diaries</a>
+                {/* <a className="nav-link">My Diaries</a> */}
+                <button className="nav-link">My Diaries</button>
               </li>
             </Link>
 
             <li className="nav-item">
-              <a className="nav-link" onClick={logout}>
-                Logout
-              </a>
+              {/* <a className="nav-link" onClick={logout}>      Logout          </a> */}
+              <button className="nav-link" onClick={logout}>      Logout          </button>
             </li>
           </ul>
         </div>

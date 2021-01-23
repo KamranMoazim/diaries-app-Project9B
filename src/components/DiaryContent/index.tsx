@@ -81,7 +81,7 @@ const DiaryContent = () => {
 
   useEffect(() => {
     getEntry(id);
-  }, []);
+  }, [id, getEntry]); /////////////////////////////////////////
 
 
   useEffect(() => {
@@ -97,7 +97,7 @@ const DiaryContent = () => {
 
     const myEntries = entries.filter((x: EntryType) => x.diaryId === id);
     setEntry(myEntries);
-  }, [allDiaries, entries]);
+  }, [allDiaries, entries, id, user.id]);  /////////////////////////////////
 
 
 
@@ -114,9 +114,9 @@ const DiaryContent = () => {
       setEntryName(entryFilterd[0].title);
       setEntryContent(entryFilterd[0].content);
     }
-    {
-      entryModal ? setEntryModal(false) : setEntryModal(true);
-    }
+    // {
+      entryModal ? setEntryModal(false) : setEntryModal(true); ///////////////////////////////////
+    // }
   };
 
 
