@@ -73,7 +73,7 @@ const signup = (schema: any, req: Request): any => {
   };
 };
 
-const data = {
+const data = { //////////////////////////////////
   login,
   signup,
 };
