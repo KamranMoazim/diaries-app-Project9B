@@ -3,7 +3,7 @@ import { showAlert } from '../utils';
 
 
 const http: AxiosInstance = axios.create({
-  baseURL: 'https://diaries.app',
+  baseURL: 'https://amazing-mcclintock-a76cbd.netlify.app/',
 });
 
 

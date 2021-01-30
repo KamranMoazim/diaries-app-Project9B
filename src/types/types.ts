@@ -9,6 +9,7 @@ export interface DiaryType {
   updatedAt: string;
   userId: string;
 }
+
 export interface EntryType {
   content: string;
   createdAt: string;
@@ -17,6 +18,7 @@ export interface EntryType {
   title: string;
   updatedAt: string;
 }
+
 export interface stateType {
   diaries: any;
   authReducer: {};
